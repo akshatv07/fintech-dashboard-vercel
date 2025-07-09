@@ -1,3 +1,28 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Base styles */
+/* Cyberpunk Theme Variables */
+:root {
+  --cyber-blue: #00f0ff;
+  --cyber-blue-dark: #0066ff;
+  --cyber-pink: #ff00ff;
+  --cyber-purple: #9d00ff;
+  --cyber-bg: #0a0a1a;
+  --cyber-card: rgba(13, 17, 28, 0.9);
+  --cyber-border: rgba(0, 240, 255, 0.2);
+  --cyber-text: #e0e0ff;
+  --cyber-text-dim: #8a8aa3;
+  --cyber-glow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
